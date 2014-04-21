@@ -17,7 +17,7 @@
 	    <div class="result-area">
 	    	Result: <br />
 	    	Input: {{inputValChar[0]}} <br />
-	    	Char Code: {{charCode()}}
+	    	Char Code: <span class="result">{{charCode()}}</span>
 	    </div>
     </div>
 
@@ -25,13 +25,14 @@
     	<h3>Convert <span style="font-weight:bold">key code</span> to <span style="font-weight:bold">character</span></h3>
     	<div class="input-area">
     		Enter code: <input type="number" class="input-box" ng-model="inputValCode" />
+        <button type="button" class="clipboard-btn" ng-click="copyToClipboard()">Copy</button>
     		<span class="input-error" ng-show="input.$error">Not a valid code!</span>
     	</div>
 
     	<div class="result-area">
-    		Results: <br />
+    		Result: <br />
     		Input: {{inputValCode}} <br />
-    		Character: {{character()}}
+    		Character: <span class="result">{{character()}}</span>
     	</div>
     </div>
 

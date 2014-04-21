@@ -31,7 +31,6 @@ app.controller('cccCtrl', ['$scope', function($scope){
 		}
 	};
 	
-
 	// Code to Char
 	$scope.inputValCode = '';
 
@@ -40,6 +39,30 @@ app.controller('cccCtrl', ['$scope', function($scope){
 		return String.fromCharCode(code);
 	}
 
+	$scope.copyToClipboard = function() {
+		clipboardPrompt($scope.character());
+	}
+
 }]);
+
+function clipboardPrompt(text) {
+	if(getOS() == "Mac"){
+		window.prompt("Copy to clipboard: Cmd+C, Enter", text);
+	} else {
+		window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+	}
+}
+
+function getOS() {
+	if(navigator.appVersion.indexOf("Win") != -1) {
+		return "Windows";
+	} else if(navigator.appVersion.indexOf("Mac") != -1) {
+		return "Mac";
+	} else if(navigator.appVersion.indexOf("X11") != -1) {
+		return "UNIX";
+	} else if(navigator.appVersion.indexOf("Linux") != -1) {
+		return "Linux";
+	} 
+}
 
 })(window, document);
