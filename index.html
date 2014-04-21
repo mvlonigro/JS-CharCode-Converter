@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cccApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Character Code Calculater</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body ng-controller="cccCtrl">
+  	<div id="char-to-code">
+  		<h3>Convert character to key code</h3>
+	    <div class="input-area">
+	   		Enter character: <input type="text" class="input-box" ng-model="inputValChar" />
+	    </div>
+
+	    <div class="result-area">
+	    	Result: <br />
+	    	Input: {{inputValChar[0]}} <br />
+	    	Char Code: {{charCode()}}
+	    </div>
+    </div>
+
+    <div id="code-to-char">
+    	<h3>Convert key code to character</h3>
+    	<div class="input-area">
+    		Enter code: <input type="number" class="input-box" ng-model="inputValCode" />
+    		<span class="input-error" ng-show="input.$error">Not a valid code!</span>
+    	</div>
+
+    	<div class="result-area">
+    		Results: <br />
+    		Input: {{inputValCode}} <br />
+    		Character: {{character()}}
+    	</div>
+
+
+
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+#char-to-code {
+	float: left;
+	margin: 15px;
+	padding: 5px;
+	background-color: lightgrey;
+}
+
+#code-to-char {
+	float: left;
+	margin: 15px;
+	padding: 5px;
+	background-color: lightblue;
+}
