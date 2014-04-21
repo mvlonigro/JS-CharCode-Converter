@@ -23,7 +23,12 @@ app.controller('cccCtrl', ['$scope', function($scope){
 
 	$scope.charCode = function() {
 		var charToConvert = inChar();
-		return charToConvert.charCodeAt(0);
+		var code = charToConvert.charCodeAt(0);
+		if(isNaN(code)) {
+			return "";
+		} else {
+			return code;
+		}
 	};
 	
 
@@ -35,11 +40,6 @@ app.controller('cccCtrl', ['$scope', function($scope){
 		return String.fromCharCode(code);
 	}
 
-
-
 }]);
-
-
-
 
 })(window, document);

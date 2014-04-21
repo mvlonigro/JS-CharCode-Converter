@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body ng-controller="cccCtrl">
+    <h2>Easy Character Code Conversion Tool</h2>
+
   	<div id="char-to-code">
-  		<h3>Convert character to key code</h3>
+  		<h3>Convert <span style="font-weight:bold">character</span> to <span style="font-weight:bold">key code</span></h3>
 	    <div class="input-area">
-	   		Enter character: <input type="text" class="input-box" ng-model="inputValChar" />
+	   		Enter character: <input type="text" class="input-box" maxlength="1" ng-model="inputValChar" />
 	    </div>
 
 	    <div class="result-area">
@@ -20,7 +22,7 @@
     </div>
 
     <div id="code-to-char">
-    	<h3>Convert key code to character</h3>
+    	<h3>Convert <span style="font-weight:bold">key code</span> to <span style="font-weight:bold">character</span></h3>
     	<div class="input-area">
     		Enter code: <input type="number" class="input-box" ng-model="inputValCode" />
     		<span class="input-error" ng-show="input.$error">Not a valid code!</span>
@@ -31,9 +33,6 @@
     		Input: {{inputValCode}} <br />
     		Character: {{character()}}
     	</div>
-
-
-
     </div>
 
     <script src="angular.js"></script>
